@@ -1,5 +1,5 @@
-@mixin button($width, $height){
-    background: darken($primary-color, 15%);
+@mixin button($width, $height, $color: $primary-color){
+    background: darken($color, 15%);
     color: #fff;
     border: none;
     text-transform: uppercase;

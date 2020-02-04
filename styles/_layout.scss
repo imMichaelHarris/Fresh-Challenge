@@ -145,6 +145,68 @@ section {
         @include circle;
     }
 }
-// #descriptions {
-//     display: grid;
-// }
+footer {
+    padding: 10em 5em;
+    min-height: 100vh;
+    background: lighten(#414141, 65%);
+    .contact {
+        margin: 0 50px;
+        padding: 0 3.5rem ;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: $secondary-font;
+        font-style: italic;
+        h4 {
+            font-weight: 300;
+            font-size: $med-text;
+        }
+    } 
+    .socials {
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        justify-content: space-between;
+        width: 20%;
+        img {
+            width: 40px;
+        }
+    }
+    .email {
+        margin: 0 50px;
+        padding: 0 3.5rem ;
+        display: flex;
+        justify-content: flex-end;
+    }
+    input{
+        padding: .5rem 1.5rem;
+        border: none;
+        &::placeholder {
+            font-family: $main-font;
+        }
+    }
+    .submit {
+        @include button(1.5rem, .5rem, #4A4A4A);
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+    .links {
+        display: flex;
+        text-align: left;
+        width: 85%;
+        justify-content: space-between;
+        h4 {
+            font-size: $med-text;
+            letter-spacing: 2px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        ul {
+            line-height: 30px;
+            font-family: $main-font;
+            list-style-type: none;
+            font-weight: 300;
+            color: #4A4A4A;
+        }
+    }
+}
