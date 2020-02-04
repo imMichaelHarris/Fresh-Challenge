@@ -1,0 +1,30 @@
+header {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    nav {
+        display: flex;
+        width: 50%;
+        align-self: flex-end;
+        align-items: center;
+        letter-spacing: 1px;
+        justify-content: space-around;
+        text-transform: uppercase;
+        color: $text-color;
+        a {
+            text-decoration: none;
+            color: $text-color;
+        }
+    }
+}
+
+button {
+    background: $primary-color;
+    color: white;
+    font-size: 1.2rem;
+    padding: .5rem 2rem;
+    border: none;
+    letter-spacing: 2px;
+}
