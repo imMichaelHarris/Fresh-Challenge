@@ -1,0 +1,16 @@
+@mixin button($width, $height){
+    background: darken($primary-color, 15%);
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    padding: $height $width;
+}
+
+@mixin circle {
+    width: 55px;
+    margin: 10px;
+    height: 55px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #D8D8D8;
+}

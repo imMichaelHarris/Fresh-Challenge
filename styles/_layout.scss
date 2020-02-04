@@ -4,6 +4,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    font-family: 'Poppins', sans-serif;
     nav {
         display: flex;
         width: 50%;
@@ -28,3 +29,122 @@ button {
     border: none;
     letter-spacing: 2px;
 }
+
+main {
+    height: 1080px;
+    background-image: url("../Page\ Assets/paleo-hero.jpg");
+    background-size: cover;
+}
+.main {
+    margin: 0 auto;
+    width: 60%;
+    padding: 5rem 0 0;
+    text-align: center;
+    display: flex;
+    height: 45%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 50px;
+    font-family: $main-font;
+    h1 {
+        font-size: $xlarge-text;
+        font-weight: 700;
+    }
+    h5 {
+        font-weight: 300;
+        color: #414141;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    button {
+        @include button(6rem, 1.5rem)
+    }
+}
+
+.points {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-around;
+    height: 100px;
+    color: $primary-color;
+    letter-spacing: 2px;
+    * {
+        padding: 2.5rem;
+        font-weight: 500;
+    }
+}
+
+section {
+    .types {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        margin: 0 auto;
+        justify-content: center;
+        letter-spacing: 1px;
+        color: $text-color-dark;
+    }
+    .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            object-fit: cover;
+            width: 50%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    .part {
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        justify-content: center;
+        object-fit: cover;
+        width: 45%;
+        height: 50%;
+        padding: 2em;
+        margin: 0;
+        * {
+            margin: 10px;
+        }
+        .sub {
+            font-family: $secondary-font;
+            font-weight: 500;
+            font-size: $med-text;
+            letter-spacing: 2px;
+        }
+        .info--main {
+            font-family: $main-font;
+            letter-spacing: 1px;
+            font-weight: 700;
+            font-size: $large-text;
+        }
+        .desc {
+            font-family: $main-font;
+            font-weight: 300;
+            line-height: 28px;
+        }
+    }
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    padding: 3.5rem;
+    background: lighten(#414141, 65%);
+    text-align: center;
+    // display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    div {
+        margin: 50px;
+    }
+    .circle {
+        @include circle;
+    }
+}
+// #descriptions {
+//     display: grid;
+// }
