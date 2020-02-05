@@ -1,241 +1,311 @@
 header {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    font-family: 'Poppins', sans-serif;
-    nav {
-        display: flex;
-        width: 50%;
-        align-self: flex-end;
-        align-items: center;
-        letter-spacing: 1px;
-        justify-content: space-around;
-        text-transform: uppercase;
-        color: $text-color;
-        a {
-            text-decoration: none;
-            color: $text-color;
-        }
+  width: 100%;
+  margin: 0 auto;
+  @include flexy(column);
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+  nav {
+    @include flexy(column, space-around);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $text-color;
+    a {
+      text-decoration: none;
+      color: $text-color;
+      padding: 0.4em;
     }
+  }
 }
-
+#logo {
+  img {
+    height: 40px;
+  }
+}
 button {
-    background: $primary-color;
-    color: white;
-    font-size: 1.2rem;
-    padding: .5rem 2rem;
-    border: none;
-    letter-spacing: 2px;
-    &:hover {
-        cursor: pointer;
-    }
+  background: $primary-color;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
+  border: none;
+  letter-spacing: 2px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 main {
-    height: 1080px;
-    background-image: url("../Page\ Assets/paleo-hero.jpg");
-    background-size: cover;
+  height: 1080px;
+  background-image: url("./Page\ Assets/paleo-hero.jpg");
+  background-size: cover;
+  background-position: -600px;
 }
 .main {
-    margin: 0 auto;
-    width: 60%;
-    padding: 5rem 0 0;
-    text-align: center;
-    display: flex;
-    height: 45%;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    line-height: 50px;
-    font-family: $main-font;
-    h1 {
-        font-size: $xlarge-text;
-        font-weight: 700;
+  margin: 0 auto;
+  width: 90%;
+  padding: 5rem 0 0;
+  text-align: center;
+  @include flexy(column, space-around);
+  height: 50%;
+  line-height: 50px;
+  font-family: $main-font;
+  h1 {
+    font-size: $xlarge-text;
+    font-weight: 700;
+  }
+  h5 {
+    font-weight: 300;
+    color: #414141;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  button {
+    @include button(4rem, 1.5rem);
+    &:hover {
+      cursor: pointer;
     }
-    h5 {
-        font-weight: 300;
-        color: #414141;
-        font-size: 16px;
-        line-height: 28px;
-    }
-    button {
-        @include button(6rem, 1.5rem);
-        &:hover {
-            cursor: pointer;
-        }
-    }
+  }
 }
 
 .points {
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
-    justify-content: space-around;
-    height: 100px;
-    color: $primary-color;
-    letter-spacing: 2px;
-    * {
-        padding: 2.5rem;
-        font-weight: 500;
-    }
+  @include flexy(column, space-around);
+  text-align: center;
+  margin: 0 auto;
+  color: $primary-color;
+  letter-spacing: 2px;
+  * {
+    padding: 2.5rem;
+    font-weight: 500;
+  }
 }
 
 section {
-    .types {
-        display: flex;
-        flex-wrap: wrap;
-        width: 80%;
-        margin: 0 auto;
-        justify-content: center;
-        letter-spacing: 1px;
-        color: $text-color-dark;
+  .types {
+    @include flexy(row, center, center, wrap);
+    margin: 0 auto;
+    letter-spacing: 1px;
+    color: $text-color-dark;
+  }
+  .info {
+    margin: 50px auto;
+    @include flexy(column, space-between);
+
+    img {
+      object-fit: cover;
+      max-width: 100%;
+      max-height: 100%;
     }
-    .info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        img {
-            object-fit: cover;
-            width: 50%;
-            max-width: 100%;
-            max-height: 100%;
-        }
+  }
+  .part {
+    @include flexy(column, center, flex-start);
+    text-align: left;
+    object-fit: cover;
+    height: 50%;
+    padding: 0.5em;
+    margin: 0;
+    * {
+      margin: 5px;
     }
-    .part {
-        display: flex;
-        text-align: left;
-        flex-direction: column;
-        justify-content: center;
-        object-fit: cover;
-        width: 45%;
-        height: 50%;
-        padding: 2em;
-        margin: 0;
-        * {
-            margin: 10px;
-        }
-        .sub {
-            font-family: $secondary-font;
-            font-weight: 500;
-            font-size: $med-text;
-            letter-spacing: 2px;
-        }
-        .info--main {
-            font-family: $main-font;
-            letter-spacing: 1px;
-            font-weight: 700;
-            font-size: $large-text;
-        }
-        .desc {
-            font-family: $main-font;
-            font-weight: 300;
-            line-height: 28px;
-        }
+    .sub {
+      font-family: $secondary-font;
+      font-weight: 500;
+      font-size: $med-text;
+      letter-spacing: 2px;
     }
-    h1 {
-        text-align: center;
-        font-size: 2.5rem;
+    .info--main {
+      font-family: $main-font;
+      letter-spacing: 1px;
+      font-weight: 700;
+      font-size: $large-text;
     }
-    padding: 3.5rem;
-    background: lighten(#414141, 65%);
+    .desc {
+      font-family: $main-font;
+      font-weight: 300;
+      line-height: 28px;
+    }
+  }
+  h1 {
     text-align: center;
-    // display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    div {
-        margin: 50px;
+    font-size: 2.2rem;
+  }
+  padding: 1.5rem;
+  background: lighten(#414141, 65%);
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  div {
+    margin: 10px;
+  }
+  .circle {
+    @include circle;
+    transition: 0.5s all ease-in-out;
+    &:hover {
+      transform: scale(1.5);
+      cursor: pointer;
     }
-    .circle {
-        @include circle;
-        transition: .5s all ease-in-out;
-        &:hover {
-            transform: scale(1.5);
-            cursor: pointer;
-        }
-    }
+  }
 }
 footer {
-    padding: 10em 5em;
-    background: lighten(#414141, 65%);
+  padding: 10em 0em;
+  background: lighten(#414141, 65%);
+  .contact {
+    padding: 0 1.5rem;
+    @include flexy(column, space-between);
+    font-family: $secondary-font;
+    font-style: italic;
+    h4 {
+      font-weight: 300;
+      font-size: $med-text;
+    }
+  }
+  .socials {
+    @include flexy(row, space-between);
+    list-style-type: none;
+    width: 80%;
+    margin: 20px auto;
+    img {
+      width: 40px;
+    }
+  }
+  .email {
+    padding: 0 1.5rem;
+    @include flexy(row, flex-end);
+  }
+  input {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    &::placeholder {
+      font-family: $main-font;
+    }
+  }
+  .submit {
+    @include button(1.5rem, 0.5rem, #4a4a4a);
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+  .links {
+    @include flexy(row, space-between);
+    text-align: left;
+    h4 {
+      font-size: $med-text;
+      letter-spacing: 2px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    ul {
+      line-height: 30px;
+      font-family: $main-font;
+      list-style-type: none;
+      font-weight: 300;
+      color: #4a4a4a;
+    }
+  }
+  .misc {
+    @include flexy(row, center);
+    font-family: $main-font;
+    font-weight: 300;
+    a {
+      color: #4a4a4a;
+      padding: 0.5rem;
+      text-decoration: none;
+    }
+  }
+}
+@media (min-width: 700px) {
+  header {
+    flex-direction: row;
+    nav {
+      width: 80%;
+      flex-direction: row;
+      align-self: flex-end;
+      a {
+        padding: 0;
+      }
+    }
+  }
+  main {
+    background-position: 0;
+  }
+  .points {
+    height: 100px;
+    flex-direction: row;
+  }
+  .main {
+    width: 60%;
+    height: 45%;
+    button {
+      @include button(6rem, 1.5rem);
+    }
+  }
+  section {
+    .types {
+      width: 80%;
+    }
+    .info {
+      flex-direction: row;
+      img {
+        width: 50%;
+      }
+    }
+  }
+  footer {
     .contact {
-        margin: 0 50px;
-        padding: 0 3.5rem ;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-family: $secondary-font;
-        font-style: italic;
-        h4 {
-            font-weight: 300;
-            font-size: $med-text;
-        }
-    } 
+      flex-direction: row;
+    }
     .socials {
-        display: flex;
-        list-style-type: none;
-        align-items: center;
-        justify-content: space-between;
-        width: 20%;
-        img {
-            width: 40px;
-        }
-    }
-    .email {
-        margin: 0 50px;
-        padding: 0 3.5rem ;
-        display: flex;
-        justify-content: flex-end;
-    }
-    input{
-        padding: .5rem 1.5rem;
-        border: none;
-        &::placeholder {
-            font-family: $main-font;
-        }
-    }
-    .submit {
-        @include button(1.5rem, .5rem, #4A4A4A);
-        font-size: 1rem;
-        margin-left: 10px;
-    }
-    .links {
-        display: flex;
-        text-align: left;
-        width: 85%;
-        justify-content: space-between;
-        h4 {
-            font-size: $med-text;
-            letter-spacing: 2px;
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-        ul {
-            line-height: 30px;
-            font-family: $main-font;
-            list-style-type: none;
-            font-weight: 300;
-            color: #4A4A4A;
-        }
+      width: 30%;
+      margin: 0;
     }
     .misc {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-family: $main-font;
-        font-weight: 300;
-        a {
-            color: #4A4A4A;
-            padding: .5rem;
-            text-decoration: none;
-            &:nth-child(2)::before, &:nth-child(2)::after {
-                content: "";
-                width: 1px;
-                height: 20px;
-                position: absolute;
-                background: #4A4A4A;
-            }
-        }
+      justify-content: space-between;
     }
+  }
+}
+
+@media (min-width: 1000px) {
+  header {
+    width: 90%;
+    nav {
+      width: 50%;
+    }
+  }
+
+  .points {
+    width: 85%;
+  }
+
+  section {
+    padding: 3.5rem;
+
+    .info {
+      width: 80%;
+    }
+    .part {
+      width: 45%;
+      padding: 2em;
+      * {
+        margin: 10px;
+      }
+    }
+  }
+  footer {
+    padding: 2em 5em;
+    .contact {
+      padding: 0 3.5rem;
+      margin: 0 50px;
+    }
+    .socials {
+      width: 20%;
+    }
+    .links {
+      width: 85%;
+      margin: 50px;
+    }
+    .email {
+      margin: 0 50px;
+      padding: 0 3.5rem;
+    }
+    .misc {
+      margin: 50px;
+    }
+  }
 }

@@ -1,17 +1,24 @@
-@mixin button($width, $height, $color: $primary-color){
-    background: darken($color, 15%);
-    color: #fff;
-    border: none;
-    text-transform: uppercase;
-    padding: $height $width;
-
+@mixin button($width, $height, $color: $primary-color) {
+  background: darken($color, 15%);
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  padding: $height $width;
 }
 
 @mixin circle {
-    width: 55px;
-    margin: 10px;
-    height: 55px;
-    display: inline-block;
-    border-radius: 50%;
-    background: #D8D8D8;
+  width: 55px;
+  margin: 10px;
+  height: 55px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #d8d8d8;
+}
+
+@mixin flexy($dir: row, $jus: space-between, $align: center, $wrap: "no-wrap") {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jus;
+  align-items: $align;
+  flex-wrap: $wrap;
 }
