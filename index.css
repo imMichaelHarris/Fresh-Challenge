@@ -25,6 +25,8 @@ button {
   padding: .5rem 2rem;
   border: none;
   letter-spacing: 2px; }
+  button:hover {
+    cursor: pointer; }
 
 main {
   height: 1080px;
@@ -57,6 +59,8 @@ main {
     border: none;
     text-transform: uppercase;
     padding: 1.5rem 6rem; }
+    .main button:hover {
+      cursor: pointer; }
 
 .points {
   display: flex;
@@ -79,7 +83,7 @@ section {
   section .types {
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     justify-content: center;
     letter-spacing: 1px;
@@ -130,11 +134,14 @@ section {
     height: 55px;
     display: inline-block;
     border-radius: 50%;
-    background: #D8D8D8; }
+    background: #D8D8D8;
+    transition: .5s all ease-in-out; }
+    section .circle:hover {
+      transform: scale(1.5);
+      cursor: pointer; }
 
 footer {
   padding: 10em 5em;
-  min-height: 100vh;
   background: #e7e7e7; }
   footer .contact {
     margin: 0 50px;
@@ -189,6 +196,37 @@ footer {
       list-style-type: none;
       font-weight: 300;
       color: #4A4A4A; }
+  footer .misc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Heebo", sans-serif;
+    font-weight: 300; }
+    footer .misc a {
+      color: #4A4A4A;
+      padding: .5rem;
+      text-decoration: none; }
+      footer .misc a:nth-child(2)::before, footer .misc a:nth-child(2)::after {
+        content: "";
+        width: 1px;
+        height: 20px;
+        position: absolute;
+        background: #4A4A4A; }
+
+.surprise {
+  width: 25%; }
+  .surprise h2 {
+    transition: .5s all ease-in-out; }
+
+.additional {
+  display: none;
+  transition: .5s all ease-in-out; }
+
+.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 1; }
 
 * {
   margin: 0;

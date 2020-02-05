@@ -28,6 +28,9 @@ button {
     padding: .5rem 2rem;
     border: none;
     letter-spacing: 2px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 main {
@@ -58,7 +61,10 @@ main {
         line-height: 28px;
     }
     button {
-        @include button(6rem, 1.5rem)
+        @include button(6rem, 1.5rem);
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
@@ -80,7 +86,7 @@ section {
     .types {
         display: flex;
         flex-wrap: wrap;
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
         justify-content: center;
         letter-spacing: 1px;
@@ -143,11 +149,15 @@ section {
     }
     .circle {
         @include circle;
+        transition: .5s all ease-in-out;
+        &:hover {
+            transform: scale(1.5);
+            cursor: pointer;
+        }
     }
 }
 footer {
     padding: 10em 5em;
-    min-height: 100vh;
     background: lighten(#414141, 65%);
     .contact {
         margin: 0 50px;
@@ -207,6 +217,25 @@ footer {
             list-style-type: none;
             font-weight: 300;
             color: #4A4A4A;
+        }
+    }
+    .misc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: $main-font;
+        font-weight: 300;
+        a {
+            color: #4A4A4A;
+            padding: .5rem;
+            text-decoration: none;
+            &:nth-child(2)::before, &:nth-child(2)::after {
+                content: "";
+                width: 1px;
+                height: 20px;
+                position: absolute;
+                background: #4A4A4A;
+            }
         }
     }
 }
